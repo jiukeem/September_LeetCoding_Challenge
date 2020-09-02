@@ -76,19 +76,19 @@ class Solution:
 # permutation 을 직접 구현해보자
 class Solution:
     def largestTimeFromDigits(self, A):
-        def gen_perm(list, start, perm_list):
+        def gen_perm(list, start):
             if start == len(list) - 1:
-                perm_list.append(list)
+                self.perm_list.append(list)
                 return
 
             for i in range(start, len(list)):
                 list[start], list[i] = list[i], list[start]
-                gen_perm(list, start+1, perm_list)
+                gen_perm(list, start+1)
                 list[start], list[i] = list[i], list[start]
 
-        perm_list = []
-        gen_perm(A, 0, perm_list)
-        return perm_list
+        self.perm_list = []
+        gen_perm(A, 0)
+        return self.perm_list
 # 재귀함수로 순열을 만드는 함수를 짰는데 print하면 제대로 나오지만
 # print(list) 대신 perm_list.append(list) 한 뒤에 perm_list를 출력하면
 # 기본 리스트 24개가 들어가있다...
