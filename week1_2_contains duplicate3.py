@@ -8,7 +8,7 @@ class Solution:
         return False
 # Algorithm: Brute Force
 # Status: Time Limit Exceeded
-# Time Complexity: O(n^2) (when k = n)
+# Time Complexity: O(n*k)
 
 
 class Solution:
@@ -29,6 +29,6 @@ class Solution:
         return False
 # Algorithm: Bucket Sort
 # Status: Accepted
-# Time Complexity: O(n lg(k))
+# Time Complexity: O(n)
 # Runtime: 60ms (top 15.8%)
 
